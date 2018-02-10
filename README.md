@@ -30,7 +30,7 @@ def my_second_route(name):
      return name
 ```
 
-*Problem 1: Write a route that takes a first name, last name, and graduating year in the route*
+**Problem 1: Write a route that takes a first name, last name, and graduating year in the route**
 
 
 So, what are we using Flask for and why are routes useful. 
@@ -75,9 +75,9 @@ def getallyears():
 
 Everything that I described above is what you're going to be working on in the Flask backend. This means figuring out how to design your database, and then define the API to make changes in your database. 
 
-*Problem 2: Download Postman, go to the url for get_all_users, and set a GET request. If you make the wrong type of request, you will get an error message*
+**Problem 2: Download Postman, go to the url for get_all_users, and set a GET request. If you make the wrong type of request, you will get an error message**
 
 Setting up the database and defining it is alot of work, so we'll leave that for your tech leads to teach you :P 
 For now, we're going to try actually using a public API to get more familair with it.
 
-*Problem 3: Write an endpoint that will take an input, search for that term on wikipeida using the API, and then return back a list of titles of the top matches*
+**Problem 3: Write an endpoint that will take an input, search for that term on wikipeida using the API, and then return back a list of titles of the top matches**
