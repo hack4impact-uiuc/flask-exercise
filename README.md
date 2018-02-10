@@ -30,7 +30,7 @@ def my_second_route(name):
      return name
 ```
 
-## Problem 1: Write a route that takes a first name, last name, and graduating year in the route  
+### Problem 1: Write a route that takes a first name, last name, and graduating year in the route  
 
 
 So, what are we using Flask for and why are routes useful. 
