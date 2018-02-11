@@ -138,4 +138,4 @@ For example
 Setting up the database and defining it is alot of work, so we'll leave that for your tech leads to teach you. Also, for the course of this intro project, we're doing everything in app.py. **In your projects though, you are going to organize the endpoints into different files, have a folder to define the models, and other files for the database connection. **
 
 
-## Message Shreyas for help :)
+## Message Shreyas for help but please use the channel #backend :)
