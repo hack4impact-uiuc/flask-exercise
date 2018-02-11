@@ -16,7 +16,7 @@ def get_all_users():
     if request.method == 'GET':
 	    return jsonify({'status': 'success', 'data':  ['aria', 'tim', 'varun', 'alex']})
     else:
-        return jsonify({"status": "failed")
+        return jsonify({"status": "failed"})
         
 if __name__ == '__main__':
 	app.run(debug=True)
