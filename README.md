@@ -1,5 +1,33 @@
 # Flask Take Home Exercises
 
+## Setup
+You must have python3.6 and pip installed. To do this, check out the wiki and the page named "Mac Setup".
+First, clone this repository and go into it:
+```
+$ git clone https://github.com/hack4impact-uiuc/FlaskTutorial.git
+$ cd FlaskTutorial
+```
+Then, install `virtualenv` and go into it. This allows you to have a virtual environment that for your specific application. 
+```
+$ pip3 install virtualenv
+$ virtualenv -p python3 venv
+$ source venv/bin/activate
+```
+You will then have a (venv) before the $, meaning that you are now in your virtual environment. Then, install the Flask.
+```
+(venv)$ pip3 install Flask
+(venv)$ pip3 install requests
+```
+You must be in this virtual environment to start this server. To start the server run:
+```
+(venv)$ python app.py
+```
+To stop the server, do `Control-C`. Also, to exit your virtual environment, which is named `venv` run:
+```
+(venv)$ deactivate venv 
+```
+
+## Exercises
 This creates an application instance
 __name__ is used to determine the root path of the application folder
 
