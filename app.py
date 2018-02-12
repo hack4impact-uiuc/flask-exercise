@@ -28,7 +28,7 @@ def create_response(data={}, status=200, message=''):
 
 @app.route('/')
 def my_first_route():
-    return create_response(data='hello world!')
+    return create_response('hello world!')
 
 @app.route('/mirror/<name>')
 def my_second_route(name):
