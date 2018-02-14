@@ -83,11 +83,11 @@ Starting the server will make it a continuously running process on `localhost:50
 
 First, make a `GET` request to the `/` endpoint. Since the server is running on `localhost:5000`, the full endpoint url is `localhost:5000/`.
 
-![Postman GET](https://lh3.googleusercontent.com/OoYCfIN8P18QWgOdqEk9RVpAp_AFR0P53JYJbhC5wS-nipfiP-7H0PncamS6xNxoFwBMfsikWch6Sg=w2880-h1598-rw)
+![Postman GET](https://lh4.googleusercontent.com/uDMU39OtDFBffWaIyQIufcmXxE3lrjKkrcduq8UdB6ZpOVhJo3rI6E4J_4NOziSKaX0X0Us0tKbzAg=w2880-h1598-rw)
 
 Try calling the `/mirror` endpoint. First, look at the code for the endpoint to see how you can specify url parameters. Then make a request on Postman to `localhost:5000/mirror/<name>`:
 
-![Postman GET mirror](https://lh5.googleusercontent.com/lwMNP5HUGC2EKe82muv0AJnc55xPkR-vDayI5z1oxIkbC4MkdSqnKi8KwXlOEsJsyyvICYWeK4uHBA=w2880-h1598-rw)
+![Postman GET mirror](https://lh3.googleusercontent.com/C8ivPHRxDyzbCOO_h9eQkIO90JA0VWTYkd7ODKStIgPxtNhqC-l_4wPEVGfnmMbpU3tnEvsxABgdhg=w2880-h1598-rw)
 
 # Exercises
 These exercises will walk you through creating a RESTful API using Flask! We don't want you to go through all the hassle of setting up a database instance, so we have created dummy data and a mock database interface to interact with it. For the sake of ease, the entire app logic minus the mockdb logic will by implemented in `app.py`. For larger projects, the API endpoints will usually be separated out into different files called `views`.
