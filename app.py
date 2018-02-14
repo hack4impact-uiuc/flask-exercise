@@ -1,4 +1,5 @@
 from flask import Flask, jsonify, request
+import mockdb.mockdb_interface as db
 
 app = Flask(__name__)
 
@@ -27,18 +28,17 @@ def create_response(data={}, status=200, message=''):
 """
 
 @app.route('/')
-def my_first_route():
+def hello_world():
     return create_response('hello world!')
 
 @app.route('/mirror/<name>')
-def my_second_route(name):
-    return create_response(name)
+def mirror(name):
+    data = {
+        'name': name
+    }
+    return create_response(data)
 
-@app.route('/users', methods=['GET'])
-def get_all_users():
-    if request.method == 'GET':
-        data = { 'users': ['aria', 'tim', 'varun', 'alex'] }
-        return create_response(data)
+# TODO: Implement the rest of the API here!
 
 """
 ~~~~~~~~~~~~ END API ~~~~~~~~~~~~
