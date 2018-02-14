@@ -24,7 +24,8 @@ def updateById(type, id, update_values):
     if not item:
         return None
     for k, v in update_values.items():
-        item[k] = v
+        if k is not 'id':
+            item[k] = v
     return item
 
 def deleteById(type, id):
