@@ -38,7 +38,7 @@ pip3 -V
 ### Setup
 First, clone this repository and go into it:
 ```
-$ git clone https://github.com/hack4impact-uiuc/FlaskTutorial.git
+$ git clone https://github.com/hack4impact-uiuc/backend-exercise.git
 $ cd FlaskTutorial
 ```
 
