@@ -39,7 +39,7 @@ pip3 -V
 First, clone this repository and go into it:
 ```
 $ git clone https://github.com/hack4impact-uiuc/backend-exercise.git
-$ cd FlaskTutorial
+$ cd backend-exercise
 ```
 
 Then, install `virtualenv` and run it. This allows you to have a virtual environment for your specific application.
