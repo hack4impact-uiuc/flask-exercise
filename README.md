@@ -83,11 +83,11 @@ Starting the server will make it a continuously running process on `localhost:50
 
 First, make a `GET` request to the `/` endpoint. Since the server is running on `localhost:5000`, the full endpoint url is `localhost:5000/`.
 
-![Postman GET](https://lh4.googleusercontent.com/uDMU39OtDFBffWaIyQIufcmXxE3lrjKkrcduq8UdB6ZpOVhJo3rI6E4J_4NOziSKaX0X0Us0tKbzAg=w2880-h1598-rw)
+![Postman GET](docs/postman_get.png)
 
 Try calling the `/mirror` endpoint. First, look at the code for the endpoint to see how you can specify url parameters. Then make a request on Postman to `localhost:5000/mirror/<name>`:
 
-![Postman GET mirror](https://lh3.googleusercontent.com/C8ivPHRxDyzbCOO_h9eQkIO90JA0VWTYkd7ODKStIgPxtNhqC-l_4wPEVGfnmMbpU3tnEvsxABgdhg=w2880-h1598-rw)
+![Postman GET mirror](docs/postman_get_mirror.png)
 
 # Exercises
 These exercises will walk you through creating a RESTful API using Flask! We don't want you to go through all the hassle of setting up a database instance, so we have created dummy data and a mock database interface to interact with it. For the sake of ease, the entire app logic minus the mockdb logic will by implemented in `app.py`. For larger projects, the API endpoints will usually be separated out into different files called `views`.
@@ -162,7 +162,7 @@ For this exercise, you can ignore any query string parameters other than `team`.
 
 In Postman, you can supply query string parameters writing the query string into your request url or by hitting the `Params` button next to `Send`. Doing so will automatically fill in the request url.
 
-![Postman Query String Request](https://lh3.googleusercontent.com/ESHTpXvW5xZa4jtT7_sn4dVbB000nQQq8T6ejGYDvEC-adJ9WplSuhEhMraijmldebjZ_smrnLAt6Q=w2880-h1598-rw)
+![Postman Query String Request](docs/postman_querystring.png)
 
 ## Part 4
 Define the endpoint:
@@ -177,7 +177,7 @@ A successful request should return a status code of `201` and return the newly c
 If any of the three required parameters aren't provided, return a `422` and a useful `message`. In general, your messages should provide the user/developer useful feedback on what they did wrong and how they can fix it.
 
 This is how you can send `body` parameters from Postman. Make sure you don't mistake this for query parameters!
-![Postman POST](https://lh6.googleusercontent.com/suUZy0RIw0YyB87IymmSF2LZBKLt_RicE4Z1Nzm6gptqeN-FH5GTDlDHuFQ4yekamuw7Xc7m8FCvOA=w2880-h1598-rw)
+![Postman POST](docs/postman_post.png)
 
 ## Part 5
 Define the endpoint:
