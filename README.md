@@ -174,7 +174,7 @@ This endpoint should create a new user. Each request should also send a `name`, 
 
 A successful request should return a status code of `201` and return the newly created user.
 
-If any of the three required parameters aren't provided, return a `422` and a useful `message`. In general, your messages should provide the user/developer useful feedback on what they did wrong and how they can fix it.
+If any of the three required parameters aren't provided, DO NOT create a new user in the db and return a `422` with a useful `message`. In general, your messages should provide the user/developer useful feedback on what they did wrong and how they can fix it.
 
 This is how you can send `body` parameters from Postman. Make sure you don't mistake this for query parameters!
 ![Postman POST](docs/postman_post.png)
