@@ -232,4 +232,14 @@ Note: this only needs to be done the first time you push a new branch. You can u
 
 Follow the instructions on the [wiki](https://github.com/hack4impact-uiuc/wiki/wiki/Git-Reference-Guide#opening-a-pull-request-pr-on-github) to open the PR.
 
+For this specific PR, since this repo is forked, there are a couple extra steps you need to do for your PR.
+
+When you create your PR on github, by default it'll want to make a PR for Aria's repo.
+
+First, we need to choose H4I's repo as the base:
+![PR Base](docs/pr1.png)
+
+Then, choose your branch (using Dean's as an example):
+![PR Branch](docs/pr2.png)
+
 Note: make sure that you don't actually merge your PR in! We are only using it as a mechanism for providing code reviews.
