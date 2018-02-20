@@ -7,10 +7,7 @@ def get(type):
     return db_state[type]
 
 def getById(type, id):
-    queried = [i for i in get(type) if i['id'] == id]
-    if (len(queried)):
-        return queried[0]
-    return None
+    return next((i for i in get(type) if i['id'] == id), None)
 
 def create(type, payload):
     last_id = max([i['id'] for i in get(type)])
@@ -21,7 +18,7 @@ def create(type, payload):
 
 def updateById(type, id, update_values):
     item = getById(type, id)
-    if not item:
+    if item is None:
         return None
     for k, v in update_values.items():
         if k is not 'id':
