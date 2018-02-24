@@ -1,4 +1,6 @@
 # Flask Exercise
+Note: this repo is intended for Hack4Impact UIUC members. If you are interested in learning from this exercise, please use [this repo](https://github.com/hack4impact-uiuc/flask-exercise) instead!
+
 This exercise is intended for you to get familiar with fundamental backend/server side programming in an interactive way, as well as for you to get comfortable developing in a modern Python/Flask environment.
 
 Reading the following will help you get a sense of the big picture when it comes to developing APIs/writing server side code, and how it fits in the context of a larger web application:
