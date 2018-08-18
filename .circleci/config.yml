@@ -1,0 +1,14 @@
+version: 2
+jobs:
+  build:
+    working_directory: ~/repo
+    docker:
+      - image: circleci/python:3.7
+    steps:
+      - checkout
+      - run:
+          command: |
+            pipenv install --skip-lock
+            pipenv install --skip-lock --dev
+            pipenv run black . --check
+            pipenv run pytest
