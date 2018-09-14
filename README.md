@@ -1,6 +1,6 @@
 # Flask Exercise
 
-Note: this repo is intended for Hack4Impact UIUC members. If you are interested in learning from this exercise, please use [this repo](https://github.com/hack4impact-uiuc/flask-exercise) instead!
+![Hack4Impact](https://uiuc.hack4impact.org/img/colored-logo.png)
 
 This exercise is intended for you to get familiar with fundamental backend/server side programming in an interactive way, as well as for you to get comfortable developing in a modern Python/Flask environment.
 
@@ -9,23 +9,11 @@ Reading the following will help you get a sense of the big picture when it comes
 - [How the Web Works](https://medium.freecodecamp.org/how-the-web-works-a-primer-for-newcomers-to-web-development-or-anyone-really-b4584e63585c) - Read all 3 parts, especially part 3!
 - [Basics of HTTP](https://egghead.io/courses/understand-the-basics-of-http)
 
-This project will be broken down into multiple parts. After you finish this project, submit a pull request and assign your tech lead to review it!
+This project will be broken down into multiple parts. After you finish this project, you must submit it by following the instructions below.
 
-This exercise is due before the next all hands meeting (Sunday Feb 18th). However, the sooner you put up your PR, the sooner you will get a review, and the faster you will get feedback and learn!
+This exercise is due before this Monday, September 17th at 11:59PM. If you have spent over 10 hours total including your work with react-exercise, submit what you have!
 
-Note that the initial Circle CI builds will fail because the tests encompass functionality that you will implement!
-
-### Guidance
-
-We understand that a lot of you are new to Flask and backend development in general. We think going through this exercise will really help you get up to speed in order to start being productive contributing to your nonprofit project.
-
-A lot of what makes a good software developer is being resourceful and knowing where/how to find information you need. At the same time, the entire Hack4Impact community is available if you get stuck, have unanswered questions, or want to discuss anything!
-
-Ask questions and discuss about python as a language and its features or syntax in the `#python` Slack channel.
-
-Ask questions and discuss about Flask, creating endpoints, or any other backend related topics in the `#backend` Slack channel.
-
-And of course, if you are already familiar with this or have figured it out, please hop in these channels and help those who need it! :)
+For any questions, feel free to email tko@hack4impact.org.
 
 ### Requirements
 
@@ -52,10 +40,15 @@ pipenv --version
 
 ### Setup
 
-First, clone this repository and go into it:
+First, fork this repository. The fork button on your top right. What this does is copies this repository over to your account. Now you should have a repository with the name `<yourusername>/flask-exercise`.
+
+It should look like this (my username is tko22):
+![fork](docs/fork.png)
+
+Then, clone this repository (click the green button saying "Clone or Download", choose http, and copy and paste it the location `<url>` ) and go into it:
 
 ```
-$ git clone https://github.com/hack4impact-uiuc/backend-exercise.git
+$ git clone <url>
 $ cd backend-exercise
 ```
 
@@ -282,7 +275,7 @@ Each method also accepts a `client` object, which is automatically injected by p
 
 ## Submitting
 
-When you're done with all the steps, open a pull request (PR) and assign your tech lead to review it!
+When you're done with all the steps, push your changes to your github repo!
 
 Let's run [black](https://github.com/ambv/black), a python formatter, before you submit. This removes all arguments on how we want to style your python code and gives reviewers a standardized style to review from. You must have it installed with `pipenv install --dev`
 
@@ -320,18 +313,4 @@ git push --set-upstream origin <YOUR_BRANCH_NAME>
 
 Note: this only needs to be done the first time you push a new branch. You can use just `git push` afterwards.
 
-If you go to your branch on github, you may see a green checkmark next to a commit. We a Circle CI continuous integration set up that automatically runs your tests. If they pass, you will have a green check mark.
-
-Follow the instructions on the [wiki](https://github.com/hack4impact-uiuc/wiki/wiki/Git-Reference-Guide#opening-a-pull-request-pr-on-github) to open the PR.
-
-For this specific PR, since this repo is forked, there are a couple extra steps you need to do for your PR.
-
-When you create your PR on github, by default it'll want to make a PR for Aria's repo.
-
-First, we need to choose H4I's repo as the base:
-![PR Base](docs/pr1.png)
-
-Then, choose your branch (using Dean's as an example):
-![PR Branch](docs/pr2.png)
-
-Note: make sure that you don't actually merge your PR in! We are only using it as a mechanism for providing code reviews.
+Once this is done, please send an email to tko@hack4impact.org with the link to your _forked_ repository and your branch name. We will need these two things to view your submission.
