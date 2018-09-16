@@ -55,7 +55,7 @@ $ cd flask-exercise
 Then, setup your virtual environment and install the python dependencies required to run this app. We use pipenv, which automatically sets everything up, given a Pipfile and Pipfile.lock. Pipfile uses virtualenv, which is a virtual Python environment isolated from other Python projects, incapable of interfering with or being affected by other Python programs on the same machine. You are thus capable of running different versions of the same package or even different python versions.
 
 ```
-pipenv install
+pipenv install --skip-lock
 ```
 
 You must be in this virtual environment to start this server. To do that:
