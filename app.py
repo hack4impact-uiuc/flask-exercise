@@ -52,7 +52,18 @@ def mirror(name):
     return create_response(data)
 
 
-# TODO: Implement the rest of the API here!
+# part 1 and 3
+@app.route("/users", methods=["GET"])
+def users():
+    team = request.args.get("team")
+    if not team:
+        data = {"users": db.get("users")}
+        return create_response(data)
+    users = db.get("users")
+    team_users = [u for u in users if u["team"] == team]
+    data = {"users": team_users}
+    return create_response(data)
+
 
 """
 ~~~~~~~~~~~~ END API ~~~~~~~~~~~~
