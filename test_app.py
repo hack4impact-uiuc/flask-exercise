@@ -39,3 +39,37 @@ def test_get_user_id(client):
     res_user = res.json["result"]["user"]
     assert res_user["name"] == "Aria"
     assert res_user["age"] == 19
+
+
+def test_create_user(client):
+    new_user ={
+            "name":"Ben",
+            "age": 25,
+            "team":"MNB"
+    }
+    res = client.post("/users", json=new_user)
+    assert res.status_code == 201
+
+    res_user = res.json["result"]["users"]
+    assert res_user["name"] == "Ben"
+    assert res_user["age"] == 25
+
+def test_update_users(client):
+    new_user ={
+            "name":"Beni",
+            "age": 2,
+            "team":"MNB"
+    }
+    res = client.put("/users/1", json=new_user)
+    assert res.status_code == 200
+
+    res_user = res.json["result"]["users"]
+    assert res_user["name"] == "Beni"
+    assert res_user["age"] == 2
+
+def test_delete_user(client):
+    res = client.delete("/users/1")
+    assert res.status_code == 200
+
+    
+

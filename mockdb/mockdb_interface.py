@@ -29,6 +29,5 @@ def updateById(type, id, update_values):
             item[k] = v
     return item
 
-
 def deleteById(type, id):
     db_state[type] = [i for i in get(type) if i["id"] != id]

@@ -1,7 +1,0 @@
-*.pyc
-.vscode/
-venv/
-__pycache__
-.DS_Store/
-migrations/
-.pytest_cache
