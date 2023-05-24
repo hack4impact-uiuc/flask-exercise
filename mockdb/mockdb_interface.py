@@ -32,3 +32,8 @@ def updateById(type, id, update_values):
 
 def deleteById(type, id):
     db_state[type] = [i for i in get(type) if i["id"] != id]
+
+
+def updateUsersData():
+    with open("./mockdb/dummy_data.py", "w") as file:
+        file.write("initial_db_state=" + str(db_state))

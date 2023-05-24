@@ -1,8 +1,1 @@
-initial_db_state = {
-    "users": [
-        {"id": 1, "name": "Aria", "age": 19, "team": "LWB"},
-        {"id": 2, "name": "Tim", "age": 20, "team": "LWB"},
-        {"id": 3, "name": "Varun", "age": 23, "team": "NNB"},
-        {"id": 4, "name": "Alex", "age": 24, "team": "C2TC"},
-    ]
-}
+initial_db_state={'users': [{'id': 1, 'name': 'Aria', 'age': 30, 'team': 'LWB'}, {'id': 2, 'name': 'Tim', 'age': 20, 'team': 'LWB'}, {'id': 3, 'name': 'Varun', 'age': 23, 'team': 'NNB'}, {'age': 20, 'name': 'Aria', 'team': 'LWB', 'id': 5}, {'age': 30, 'name': 'Aria', 'team': 'LWB', 'id': 6}, {'age': 19, 'name': 'Aria', 'team': 'LWB', 'id': 7}]}
