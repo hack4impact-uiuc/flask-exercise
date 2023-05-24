@@ -2,6 +2,8 @@ from typing import Tuple
 
 from flask import Flask, jsonify, request, Response
 import mockdb.mockdb_interface as db
+from mockdb.dummy_data import initial_db_state
+db_state = initial_db_state
 
 app = Flask(__name__)
 
@@ -45,11 +47,49 @@ def create_response(
 def hello_world():
     return create_response({"content": "hello world!"})
 
-
 @app.route("/mirror/<name>")
 def mirror(name):
-    data = {"name": name}
-    return create_response(data)
+    return create_response({"name": name})
+
+@app.route("/users/<id>")
+def get_users_by_id(id):
+    if(db.getById("users",int(id))):
+      return create_response({"user":db.getById("users",int(id))})
+    return create_response({},404,"user not found")
+
+@app.route("/users")
+def get_users_in_team():
+    if(request.args.get('team')):
+        return create_response({"users":list(filter(lambda x: x['team'] == request.args.get('team'), db.get("users")))})
+    return create_response({"users":db.get('users')})
+
+@app.route("/users",methods=["POST"])
+def add_new_user():
+    user = request.get_json()
+    message="you have to send correct the:"      
+    if("name" in user and "age" in user and "team" in user ):
+        return create_response({"newUser":[db.create("users",user)]},201)
+    if("name" not in user):
+        message+="name"
+    if("age" not in user):
+        message+="age"
+    if("team" not in user):
+        message+="team"   
+    return create_response({},401,message)
+
+@app.route("/users/<id>",methods=["PUT"])
+def update_user(id):
+    details = request.get_json()
+    if(db.updateById("users",int(id),details)!= None):
+        return create_response({},201,"successfully updated")
+    return create_response({},404,"the user id is not found") 
+
+@app.route("/users/<id>",methods=["DELETE"])
+def delete_user(id):
+    if(db.getById("users",int(id))== None):
+      return  create_response({},404,"the user id is not found")  
+    db.deleteById("users",int(id))
+    return create_response({},201,"successfully deleted")
 
 
 # TODO: Implement the rest of the API here!
@@ -57,5 +97,6 @@ def mirror(name):
 """
 ~~~~~~~~~~~~ END API ~~~~~~~~~~~~
 """
+
 if __name__ == "__main__":
     app.run(debug=True)
