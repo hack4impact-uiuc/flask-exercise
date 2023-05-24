@@ -92,20 +92,12 @@ def test_update_user_with_not_exist_id(client):
 
 
 def test_delete_user(client):
-    res = client.delete(
-        "/users/1",
-        data=json.dumps({"name": "gili"}),
-        headers={"Content-Type": "application/json"},
-    )
+    res = client.delete("/users/1")
     assert res.status_code == 201
     assert res.json["message"] == "successfully deleted"
 
 
 def test_delete_user_with_not_exist_id(client):
-    res = client.delete(
-        "/users/89",
-        data=json.dumps({"name": "gili"}),
-        headers={"Content-Type": "application/json"},
-    )
+    res = client.delete("/users/89")
     assert res.status_code == 404
     assert res.json["message"] == "the user id is not found"
