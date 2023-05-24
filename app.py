@@ -58,7 +58,7 @@ def mirror(name):
 def get_users_by_id(id):
     if db.getById("users", int(id)):
         return create_response({"user": db.getById("users", int(id))})
-    return create_response({}, 404, "user not found")
+    return create_response(None, 404, "user not found")
 
 
 @app.route("/users")
@@ -88,23 +88,23 @@ def add_new_user():
         message += "age"
     if "team" not in user:
         message += "team"
-    return create_response({}, 401, message)
+    return create_response(None, 401, message)
 
 
 @app.route("/users/<id>", methods=["PUT"])
 def update_user(id):
     details = request.get_json()
     if db.updateById("users", int(id), details) != None:
-        return create_response({}, 201, "successfully updated")
-    return create_response({}, 404, "the user id is not found")
+        return create_response(None, 201, "successfully updated")
+    return create_response(None, 404, "the user id is not found")
 
 
 @app.route("/users/<id>", methods=["DELETE"])
 def delete_user(id):
     if db.getById("users", int(id)) == None:
-        return create_response({}, 404, "the user id is not found")
+        return create_response(None, 404, "the user id is not found")
     db.deleteById("users", int(id))
-    return create_response({}, 201, "successfully deleted")
+    return create_response(None, 201, "successfully deleted")
 
 
 # TODO: Implement the rest of the API here!
